@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <joke-button />
+    </div>
+    <div id="jokeTypes">
+      <normal-joke />
+      <!-- <snake-joke />
+      <loud-joke /> -->
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import JokeButton from "./components/JokeButton.vue";
+import NormalJoke from "./components/NormalJoke.vue";
+// import SnakeJoke from "./components/SnakeJoke.vue";
+// import LoudJoke from "./components/LoudJoke.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    JokeButton,
+    NormalJoke,
+    // SnakeJoke,
+    // LoudJoke,
+  },
+};
 </script>
 
 <style>
 #app {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 3fr;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+}
+#jokeTypes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 </style>
