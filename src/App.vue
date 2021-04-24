@@ -1,28 +1,37 @@
 <template>
+  <!-- using components in HTML -->
   <div id="app">
     <div>
       <joke-button />
     </div>
     <div id="jokeTypes">
-      <normal-joke />
-      <!-- <snake-joke /> -->
-      <loud-joke />
+      <div>
+        <normal-joke />
+      </div>
+      <div>
+        <snake-joke />
+      </div>
+      <div>
+        <loud-joke />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+// importing other components
 import JokeButton from "./components/JokeButton.vue";
 import NormalJoke from "./components/NormalJoke.vue";
-// import SnakeJoke from "./components/SnakeJoke.vue";
+import SnakeJoke from "./components/SnakeJoke.vue";
 import LoudJoke from "./components/LoudJoke.vue";
 
 export default {
   name: "App",
   components: {
+    //registering components
     JokeButton,
     NormalJoke,
-    // SnakeJoke,
+    SnakeJoke,
     LoudJoke,
   },
 };
@@ -32,15 +41,15 @@ export default {
 #app {
   display: grid;
   place-items: center;
-  grid-template-rows: 1fr 3fr;
+  grid-auto-flow: row;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 60px;
 }
+
 #jokeTypes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 </style>
