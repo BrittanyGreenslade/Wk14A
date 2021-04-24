@@ -12,9 +12,6 @@ export default new Vuex.Store({
     updateJoke: function(state, data) {
       state.newJoke = data;
     },
-    retrieveJoke: function(state, data) {
-      state.newJoke = data;
-    },
   },
   actions: {
     generateJoke: function(context) {
@@ -25,12 +22,17 @@ export default new Vuex.Store({
         })
         .then((res) => {
           let newJoke = res.data.joke;
-          context.commit("retrieveJoke", newJoke);
+          context.commit("updateJoke", newJoke);
         })
         .catch((err) => {
           console.log(err);
         });
     },
   },
-  getters: {},
+  getters: {
+    loudJoke: function(state) {
+      let loudJoke = state.newJoke.toUpperCase();
+      return loudJoke;
+    },
+  },
 });

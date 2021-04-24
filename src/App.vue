@@ -5,8 +5,8 @@
     </div>
     <div id="jokeTypes">
       <normal-joke />
-      <!-- <snake-joke />
-      <loud-joke /> -->
+      <!-- <snake-joke /> -->
+      <loud-joke />
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@
 import JokeButton from "./components/JokeButton.vue";
 import NormalJoke from "./components/NormalJoke.vue";
 // import SnakeJoke from "./components/SnakeJoke.vue";
-// import LoudJoke from "./components/LoudJoke.vue";
+import LoudJoke from "./components/LoudJoke.vue";
 
 export default {
   name: "App",
@@ -23,7 +23,7 @@ export default {
     JokeButton,
     NormalJoke,
     // SnakeJoke,
-    // LoudJoke,
+    LoudJoke,
   },
 };
 </script>

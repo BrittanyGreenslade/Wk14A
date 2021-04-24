@@ -23,21 +23,6 @@ export default {
       ).innerText = `${normalJoke}`;
     },
   },
-  //   methods: {
-  //     generateJoke: function() {
-  //       axios
-  //         .request({
-  //           url: "https://geek-jokes.sameerkumar.website/api?format=json",
-  //           method: "GET",
-  //         })
-  //         .then((res) => {
-  //           this.$store.commit("updateJoke", res.data.joke);
-  //         })
-  //         .catch((err) => {
-  //           console.log(err);
-  //         });
-  //     },
-  //   },
 };
 </script>
 
